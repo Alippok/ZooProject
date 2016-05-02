@@ -18,6 +18,7 @@ public class BigCatFactory {
 		if(species.equals("tiger")) {
 			BigCat tiger =  new Tiger();
 			tiger.setId(getIdNumber());
+			idNumber += 1;
 			return tiger;
 		}
 		return null;

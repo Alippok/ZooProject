@@ -16,7 +16,9 @@ public class BigCatFactory {
 			return new Lion();
 		}
 		if(species.equals("tiger")) {
-			return new Tiger();
+			BigCat tiger =  new Tiger();
+			tiger.setId(getIdNumber());
+			return tiger;
 		}
 		return null;
 		

@@ -13,6 +13,20 @@ public class TestBigCatFactory {
 		assertTrue(lion instanceof Lion);
 	}
 	
+	@Test
+	public void testFactoryCreatesInstanceOfBigCat(){
+		BigCatFactory bigCatFactory = new BigCatFactory();
+		BigCat lion = bigCatFactory.getBigCat("lion");
+		assertTrue(lion instanceof BigCat);
+	}
+	
+	@Test
+	public void testFactoryReturnsNullIfTypeIsNotFound(){
+		BigCatFactory bigCatFactory = new BigCatFactory();
+		BigCat lion = bigCatFactory.getBigCat("gerbil");
+		assertTrue(lion == null);
+	}
+	
 	
 
 }

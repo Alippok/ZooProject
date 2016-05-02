@@ -4,7 +4,7 @@ public class Tiger extends BigCat{
 	
 	public Tiger() {
 		super();
-		this.type = "tiger";
+		this.species = "tiger";
 	}	
 
 }

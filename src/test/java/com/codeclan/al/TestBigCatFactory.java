@@ -35,18 +35,28 @@ public class TestBigCatFactory {
 	}
 	
 	@Test 
-	public void testBigCatAssignsTypeOnCreation(){
+	public void testBigCatAssignsSpeciesOnCreation(){
 		BigCatFactory bigCatFactory = new BigCatFactory();
 		BigCat tiger = bigCatFactory.getBigCat("tiger");
-		assertTrue(tiger.getType() == "tiger");
+		assertTrue(tiger.getSpecies() == "tiger");
 	}
 	
 	@Test
-	public void testLionAssignsTypeOnCreation(){
+	public void testLionAssignsSpeciesOnCreation(){
 		BigCatFactory bigCatFactory = new BigCatFactory();
 		BigCat lion = bigCatFactory.getBigCat("lion");
-		assertTrue(lion.getType() == "lion");
+		assertTrue(lion.getSpecies() == "lion");
 	}
+	
+	@Test
+	public void testFactoryIsInstatiatedWithIdNumber1(){
+		BigCatFactory bigCatFactory = new BigCatFactory();
+		assertTrue(bigCatFactory.getIdNumber() == 1);
+	}
+	
+	 
+	
+	
 	
 	
 	

@@ -11,17 +11,24 @@ public class BigCatFactory {
 		return idNumber;
 	}
 	
+	public void incrementIdNumber(){
+		idNumber += 1;
+	}
+	
+	public void setBigCatId(BigCat animal){
+		animal.setId(getIdNumber());
+		incrementIdNumber();
+	}
+	
 	public BigCat getBigCat(String species) {
 		if(species.equals("lion")){
 			BigCat lion = new Lion();
-			lion.setId(getIdNumber());
-			idNumber += 1;
+			setBigCatId(lion);
 			return lion;
 		}
 		if(species.equals("tiger")) {
 			BigCat tiger =  new Tiger();
-			tiger.setId(getIdNumber());
-			idNumber += 1;
+			setBigCatId(tiger);
 			return tiger;
 		}
 		return null;

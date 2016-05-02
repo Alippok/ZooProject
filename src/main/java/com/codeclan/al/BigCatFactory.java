@@ -6,6 +6,9 @@ public class BigCatFactory {
 		if(type.equals("lion")){
 			return new Lion();
 		}
+		if(type.equals("tiger")) {
+			return new Tiger();
+		}
 		return null;
 		
 	}

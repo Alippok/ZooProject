@@ -27,6 +27,24 @@ public class TestBigCatFactory {
 		assertTrue(lion == null);
 	}
 	
+	@Test
+	public void testFactoryReturnsInstanceOfTiger(){
+		BigCatFactory bigCatFactory = new BigCatFactory();
+		BigCat tiger = bigCatFactory.getBigCat("tiger");
+		assertTrue(tiger instanceof Tiger);
+	}
+	
+	@Test 
+	public void testBigCatAssignsTypeOnCreation(){
+		BigCatFactory bigCatFactory = new BigCatFactory();
+		BigCat tiger = bigCatFactory.getBigCat("tiger");
+		assertTrue(tiger.getType() == "tiger");
+	}
+	
+	
+	
+	
+	
 	
 
 }

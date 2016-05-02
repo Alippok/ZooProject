@@ -49,6 +49,13 @@ public class TestBigCatFactory {
 	}
 	
 	@Test
+	public void testFactoryAssignsTypeOnCreation(){
+		BigCatFactory bigCatFactory = new BigCatFactory();
+		BigCat tiger = bigCatFactory.getBigCat("tiger");
+		assertTrue(tiger.getType() == "Big Cat");
+	}
+	
+	@Test
 	public void testFactoryIsInstatiatedWithIdNumber1(){
 		BigCatFactory bigCatFactory = new BigCatFactory();
 		assertTrue(bigCatFactory.getIdNumber() == 1);

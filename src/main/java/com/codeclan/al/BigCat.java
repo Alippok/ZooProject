@@ -4,6 +4,10 @@ public abstract class BigCat {
 	protected String type;
 	protected String species;
 	
+	public BigCat(){
+		type = "Big Cat";
+	}
+	
 	public String getType(){
 		return type;
 	}

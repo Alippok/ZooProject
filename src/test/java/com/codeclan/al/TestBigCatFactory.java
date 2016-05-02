@@ -82,6 +82,14 @@ public class TestBigCatFactory {
 		assertTrue(bigCatFactory.getIdNumber() == 2);
 	}
 	
+	@Test
+	public void testFactorySetsIdOfNextInstantiatedBigCatNewIdNumber(){
+		BigCatFactory bigCatFactory = new BigCatFactory();
+		BigCat tiger = bigCatFactory.getBigCat("tiger");
+		BigCat tigerTwo = bigCatFactory.getBigCat("tiger");
+		assertEquals(tigerTwo.getId(), "Big Cat2");
+	}
+	
 	 
 	
 	

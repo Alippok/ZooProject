@@ -52,14 +52,14 @@ public class TestBigCatFactory {
 	public void testFactoryAssignsTypeOnCreation(){
 		BigCatFactory bigCatFactory = new BigCatFactory();
 		BigCat tiger = bigCatFactory.getBigCat("tiger");
-		assertTrue(tiger.getType() == "Big Cat");
+		assertTrue(tiger.getType() == "BigCat");
 	}
 	
 	@Test
 	public void testTypeAssignmentWorksForOtherChildClass(){
 		BigCatFactory bigCatFactory = new BigCatFactory();
 		BigCat lion = bigCatFactory.getBigCat("lion");
-		assertTrue(lion.getType() == "Big Cat");
+		assertTrue(lion.getType() == "BigCat");
 	}
 	
 	@Test
@@ -72,7 +72,7 @@ public class TestBigCatFactory {
 	public void testFactoryAssignsIdNumberToInstantiatedClass(){
 		BigCatFactory bigCatFactory = new BigCatFactory();
 		BigCat tiger = bigCatFactory.getBigCat("tiger");
-		assertEquals(tiger.getId(), "Big Cat1");
+		assertEquals(tiger.getId(), "BigCat_1");
 	}
 	
 	@Test
@@ -87,14 +87,25 @@ public class TestBigCatFactory {
 		BigCatFactory bigCatFactory = new BigCatFactory();
 		BigCat tiger = bigCatFactory.getBigCat("tiger");
 		BigCat tigerTwo = bigCatFactory.getBigCat("tiger");
-		assertEquals(tigerTwo.getId(), "Big Cat2");
+		assertEquals(tigerTwo.getId(), "BigCat_2");
 	}
 	
 	@Test
 	public void testFactorySetsIdOfADifferentChildClass(){
 		BigCatFactory bigCatFactory = new BigCatFactory();
 		BigCat lion = bigCatFactory.getBigCat("lion");
-		assertEquals(lion.getId(), "Big Cat1");
+		assertEquals(lion.getId(), "BigCat_1");
+	}
+	
+	@Test
+	public void testFactorySetsIdsOfConsectutiveInstancesOfDifferentBigCatChildClasses(){
+		BigCatFactory bigCatFactory = new BigCatFactory();
+		BigCat lion = bigCatFactory.getBigCat("lion");
+		BigCat lionTwo = bigCatFactory.getBigCat("lion");
+		BigCat tiger = bigCatFactory.getBigCat("tiger");
+		BigCat tigerTwo = bigCatFactory.getBigCat("tiger");
+		
+		assertEquals(tigerTwo.getId(), "BigCat_4");
 	}
 	
 	 

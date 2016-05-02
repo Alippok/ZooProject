@@ -6,7 +6,7 @@ public abstract class BigCat {
 	protected String id;
 	
 	public BigCat(){
-		type = "Big Cat";
+		type = "BigCat";
 	}
 	
 	public String getType(){
@@ -18,7 +18,7 @@ public abstract class BigCat {
 	}
 	
 	public void setId (int number) {
-		id = this.type + number;
+		id = this.type + "_" + number;
 	}
 	
 	public String getId() {

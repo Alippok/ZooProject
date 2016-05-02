@@ -22,5 +22,24 @@ public class TestFactoryGenerator {
 		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
 		assertTrue(birdFactory instanceof BirdFactory);
 	}
+	
+	@Test
+	public void testChildOfAbstractFactoryIsInstantiatedWithIdNumber(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		assertTrue(birdFactory.getCurrentIdNumber() == 1);
+	}
+	
+	@Test
+	public void testDifferentChildOfAbstractFactoryIsIsInstantiatedWithIdNumber(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		assertTrue(fishFactory.getCurrentIdNumber() == 1); 
+	}
+	
+	@Test
+	public void testAbstractFactoryPassesGetAnimalTypeMethodToChildFactory(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish shark = fishFactory.getFish("shark");
+		assertTrue(shark instanceof Fish);
+	}
 
 }

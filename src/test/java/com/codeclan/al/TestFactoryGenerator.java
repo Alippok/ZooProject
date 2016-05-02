@@ -16,5 +16,11 @@ public class TestFactoryGenerator {
 		AbstractFactory bigCatFactory = FactoryGenerator.getFactory("big cat");
 		assertTrue(bigCatFactory == null);
 	}
+	
+	@Test
+	public void testFactoryGeneratorReturnsADifferntFactoryTypeForDifferentChoice(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		assertTrue(birdFactory instanceof BirdFactory);
+	}
 
 }

@@ -6,6 +6,9 @@ public class FactoryGenerator {
 		if(choice.equals("fish")){
 			return new FishFactory();
 		}
+		if(choice.equals("bird")){
+			return new BirdFactory();
+		}
 		return null;
 	}
 

@@ -90,6 +90,13 @@ public class TestBigCatFactory {
 		assertEquals(tigerTwo.getId(), "Big Cat2");
 	}
 	
+	@Test
+	public void testFactorySetsIdOfADifferentChildClass(){
+		BigCatFactory bigCatFactory = new BigCatFactory();
+		BigCat lion = bigCatFactory.getBigCat("lion");
+		assertEquals(lion.getId(), "Big Cat1");
+	}
+	
 	 
 	
 	

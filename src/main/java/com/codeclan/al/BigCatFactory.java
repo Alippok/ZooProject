@@ -13,7 +13,10 @@ public class BigCatFactory {
 	
 	public BigCat getBigCat(String species) {
 		if(species.equals("lion")){
-			return new Lion();
+			BigCat lion = new Lion();
+			lion.setId(getIdNumber());
+			idNumber += 1;
+			return lion;
 		}
 		if(species.equals("tiger")) {
 			BigCat tiger =  new Tiger();

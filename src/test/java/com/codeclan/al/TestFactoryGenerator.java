@@ -88,6 +88,13 @@ public class TestFactoryGenerator {
 		Reptile crocodile = reptileFactory.getReptile("crocodilian");
 		assertTrue(crocodile instanceof Reptile);
 	}
+	
+	@Test
+	public void testReptileFactorySetsExoticRating(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		Reptile crocodile = reptileFactory.getReptile("crocodilian");
+		assertTrue(crocodile.getExoticRating() == 71);
+	}
 
 	
 	

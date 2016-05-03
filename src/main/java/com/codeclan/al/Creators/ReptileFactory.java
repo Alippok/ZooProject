@@ -1,11 +1,12 @@
 package com.codeclan.al.Creators;
 
+import com.codeclan.al.Animal;
 import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.FishClasses.Fish;
 import com.codeclan.al.ReptileClasses.Crocodilian;
 import com.codeclan.al.ReptileClasses.Reptile;
 
-public class ReptileFactory extends AbstractFactory {
+public class ReptileFactory extends AbstractFactory implements ExoticCalculator {
 //redundant methods inherited from AbstractFactory
 	@Override
 	public Fish getFish(String type) {
@@ -20,10 +21,18 @@ public class ReptileFactory extends AbstractFactory {
 
 	public Reptile getReptile(String type) {
 		if(type.equals("crocodilian")){
-			return new Crocodilian();
+			Reptile crocodilian = new Crocodilian();
+			calculateExoticLevel(crocodilian);
+			return crocodilian;
 		}
 		return null;
 		
+	}
+
+	public void calculateExoticLevel(Animal animal) {
+		if(animal instanceof Crocodilian){
+			animal.setExoticRating(71);
+		}
 	}
 	
 

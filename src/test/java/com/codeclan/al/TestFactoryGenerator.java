@@ -41,5 +41,22 @@ public class TestFactoryGenerator {
 		Fish shark = fishFactory.getFish("shark");
 		assertTrue(shark instanceof Fish);
 	}
+	
+	@Test
+	public void testAbstractFactoryPassesDifferentGetAnimalTypeMethodToChildFactory(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish ray = fishFactory.getFish("ray");
+		assertTrue(ray instanceof Ray);
+	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

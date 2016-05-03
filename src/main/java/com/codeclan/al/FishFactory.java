@@ -6,6 +6,9 @@ public class FishFactory extends AbstractFactory {
 		if(type.equals("shark")){
 			return new Shark();
 		}
+		if(type.equals("ray")){
+			return new Ray();
+		}
 		return null;
 	}
 

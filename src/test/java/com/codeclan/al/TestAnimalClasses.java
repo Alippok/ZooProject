@@ -30,5 +30,13 @@ public class TestAnimalClasses {
 		assertTrue(eagle.getSpecies() == "Golden Eagle");
 	}
 	
+	@Test
+	public void testEagleInheritsFromAnimalAbstractClass(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		eagle.setSpecies("Golden Eagle");
+		assertTrue(eagle.getSpecies() == "Golden Eagle");
+	}
+	
 
 }

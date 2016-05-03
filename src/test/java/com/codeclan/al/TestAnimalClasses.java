@@ -46,14 +46,15 @@ public class TestAnimalClasses {
 		assertTrue(shark.getType() == "fish");
 	}
 	
-//	@Test
-//	public void testSharkInheritsIdMethodsFromAnimalAbstractClass(){
-//		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
-//		Fish shark = fishFactory.getFish("shark");
-//		shark.setSpecies("Great White");
-//		shark.setId(1);
-//		assertTrue(shark.getId() == "Fish_1");
-//	}
+	@Test
+	public void testSharkInheritsIdMethodsFromAnimalAbstractClass(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish shark = fishFactory.getFish("shark");
+		shark.setType("fish");
+		shark.setSpecies("Great White");
+		shark.setId(1);
+		assertEquals("fish_1", shark.getId());
+	}
 	
 
 }

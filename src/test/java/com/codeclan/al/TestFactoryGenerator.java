@@ -9,6 +9,7 @@ import com.codeclan.al.Creators.AbstractFactory;
 import com.codeclan.al.Creators.BirdFactory;
 import com.codeclan.al.Creators.FactoryGenerator;
 import com.codeclan.al.Creators.FishFactory;
+import com.codeclan.al.Creators.ReptileFactory;
 import com.codeclan.al.FishClasses.Fish;
 import com.codeclan.al.FishClasses.Ray;
 
@@ -72,6 +73,12 @@ public class TestFactoryGenerator {
 		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
 		Bird eagle = birdFactory.getBird("eagle");
 		assertTrue(eagle instanceof Eagle);
+	}
+	
+	@Test
+	public void testFactoryGeneratorGeneratesNewFactory(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		assertTrue(reptileFactory instanceof ReptileFactory);
 	}
 
 	

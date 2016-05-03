@@ -20,6 +20,7 @@ public class BirdFactory extends AbstractFactory implements ExoticCalculator{
 		if(type.equals("eagle")){
 			Bird eagle = new Eagle();
 			calculateExoticLevel(eagle);
+			setExoticStatus(eagle);
 			return eagle;
 			
 		}
@@ -33,10 +34,6 @@ public class BirdFactory extends AbstractFactory implements ExoticCalculator{
 		
 	}
 
-	public void setExoticStatus(Animal animal) {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	
 

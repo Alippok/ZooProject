@@ -2,6 +2,7 @@ package com.codeclan.al;
 
 import org.junit.*;
 
+import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.Creators.AbstractFactory;
 import com.codeclan.al.Creators.FactoryGenerator;
 import com.codeclan.al.ReptileClasses.Reptile;
@@ -42,6 +43,13 @@ public class TestAbstractFactory {
 		Reptile crocodile = reptileFactory.getReptile("crocodilian");
 //		assertTrue(crocodile.getExoticRating() == 71);
 		assertTrue(crocodile.getExoticStatus() == "rare");
+	}
+	
+	@Test
+	public void testBirdFactorySetsExoticStatusOfEagle(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		assertTrue(eagle.getExoticStatus() == "rare");
 	}
 	
 	

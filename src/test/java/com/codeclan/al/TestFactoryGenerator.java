@@ -12,6 +12,7 @@ import com.codeclan.al.Creators.FishFactory;
 import com.codeclan.al.Creators.ReptileFactory;
 import com.codeclan.al.FishClasses.Fish;
 import com.codeclan.al.FishClasses.Ray;
+import com.codeclan.al.ReptileClasses.Reptile;
 
 
 
@@ -79,6 +80,13 @@ public class TestFactoryGenerator {
 	public void testFactoryGeneratorGeneratesNewFactory(){
 		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
 		assertTrue(reptileFactory instanceof ReptileFactory);
+	}
+	
+	@Test
+	public void testReptileFactoryInheritsGetReptileMethod(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		Reptile crocodile = reptileFactory.getReptile("crocodilian");
+		assertTrue(crocodile instanceof Reptile);
 	}
 
 	

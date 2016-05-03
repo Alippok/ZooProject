@@ -5,6 +5,11 @@ public abstract class Animal {
 	protected String species;
 	protected String id;
 	protected int exoticRating;
+	protected int health;
+	
+	public Animal(){
+		health = 100;
+	}
 	
 	public void setType(String type) {
 		this.type = type;
@@ -33,7 +38,7 @@ public abstract class Animal {
 		return result;
 	}
 	
-	public boolean setExoticRating(int rating){
+	public boolean setExoticRating(int rating) {
 		if(rating<=100 && rating>0){
 		    exoticRating = rating;
 		    return true;
@@ -42,8 +47,13 @@ public abstract class Animal {
 		}
 	}
 	
-	public int getExoticRating(){
+	public int getExoticRating() {
 		int result = exoticRating;
+		return result;
+	}
+	
+	public int getHealth() {
+		int result = health;
 		return result;
 	}
 

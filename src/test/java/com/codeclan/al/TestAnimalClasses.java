@@ -8,19 +8,19 @@ import com.codeclan.al.FishClasses.Fish;
 
 public class TestAnimalClasses {
 
-	@Test
-	public void testEagleSetsTypeWhenInstantiated(){
-		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
-		Bird eagle = birdFactory.getBird("eagle");
-		assertTrue(eagle.getType() == "eagle");
-	}
-	
-	@Test 
-	public void testRaySetsTypeWhenInstantiated(){
-		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
-		Fish ray = fishFactory.getFish("ray");
-		assertTrue(ray.getType() == "ray");
-	}
+//	@Test
+//	public void testEagleSetsTypeWhenInstantiated(){
+//		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+//		Bird eagle = birdFactory.getBird("eagle");
+//		assertTrue(eagle.getType() == "eagle");
+//	}
+//	
+//	@Test 
+//	public void testRaySetsTypeWhenInstantiated(){
+//		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+//		Fish ray = fishFactory.getFish("ray");
+//		assertTrue(ray.getType() == "ray");
+//	}
 	
 	@Test
 	public void testChildOfBirdAbstractClassCanSetSpecies(){
@@ -91,6 +91,13 @@ public class TestAnimalClasses {
 		Fish ray = fishFactory.getFish("ray");
 		ray.setExoticRating(67);
 		assertEquals(67, ray.getExoticRating());
+	}
+	
+	@Test
+	public void testAnimalsAreInstatiatedWithDefaultHealth(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		assertEquals(100, eagle.getHealth());
 	}
 	
 	

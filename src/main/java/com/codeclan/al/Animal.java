@@ -34,13 +34,18 @@ public abstract class Animal {
 	}
 	
 	public boolean setExoticRating(int rating){
-		if(rating<100){
+		if(rating<=100 && rating>0){
 		    exoticRating = rating;
 		    return true;
 		} else {
 			return false;
 		}
 	
+	}
+	
+	public int getExoticRating(){
+		int result = exoticRating;
+		return result;
 	}
 
 }

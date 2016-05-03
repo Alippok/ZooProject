@@ -70,5 +70,22 @@ public class TestAnimalClasses {
 		assertFalse(eagle.setExoticRating(101));
 	}
 	
+	@Test
+	public void testExoticRatingReturns0IfNotSetAsNumberIsTooHigh(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		eagle.setExoticRating(101);
+		assertEquals(0, eagle.getExoticRating());
+	}
+	
+	@Test
+	public void testSetExoticRatingMethodReturnsFalseIfNumberIs0(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		assertFalse(eagle.setExoticRating(0));
+	}
+	
+	
+	
 
 }

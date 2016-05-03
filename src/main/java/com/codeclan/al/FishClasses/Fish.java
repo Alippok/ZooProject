@@ -1,11 +1,9 @@
 package com.codeclan.al.FishClasses;
 
-public abstract class Fish {
-	protected String type;
+import com.codeclan.al.Animal;
+
+public abstract class Fish extends Animal {
 	
-	public String getType(){
-		return type;
-	}
 	
 
 }

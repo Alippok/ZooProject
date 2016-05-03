@@ -38,5 +38,22 @@ public class TestAnimalClasses {
 		assertTrue(eagle.getSpecies() == "Golden Eagle");
 	}
 	
+	@Test
+	public void testSharkInheritsSetTypeMethodFromAnimalSuperClass(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish shark = fishFactory.getFish("shark");
+		shark.setType("fish");
+		assertTrue(shark.getType() == "fish");
+	}
+	
+//	@Test
+//	public void testSharkInheritsIdMethodsFromAnimalAbstractClass(){
+//		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+//		Fish shark = fishFactory.getFish("shark");
+//		shark.setSpecies("Great White");
+//		shark.setId(1);
+//		assertTrue(shark.getId() == "Fish_1");
+//	}
+	
 
 }

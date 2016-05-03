@@ -68,6 +68,10 @@ public abstract class Animal {
 		return result;
 	}
 	
+	public void setExoticStatus(String status){
+		exoticStatus = status;
+	}
+	
 	public double getMarketPrice(){
 		double result = marketPrice;
 		return result;

@@ -101,10 +101,24 @@ public class TestAnimalClasses {
 	}
 	
 	@Test
-	public void testAnimalsAreInstatiatedWithDefaultExoticStatus(){
+	public void testAnimalsAreInstantiatedWithDefaultExoticStatus(){
 		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
 		Bird eagle = birdFactory.getBird("eagle");
 		assertTrue(eagle.getExoticStatus() == null);
+	}
+	
+	@Test
+	public void testAnimalsAreInstantiatedWithDefaultMarketPrice(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish shark = fishFactory.getFish("shark");
+		assertTrue(shark.getMarketPrice() == 20.00);
+	}
+	
+	@Test
+	public void testOtherAnimalSubClassIsInstantiatedWithDefaultPrice(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		assertTrue(eagle.getMarketPrice() == 20.00);		
 	}
 	
 	

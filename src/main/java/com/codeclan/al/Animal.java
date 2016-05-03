@@ -7,12 +7,14 @@ public abstract class Animal {
 	protected int health;
 	protected int exoticRating;
 	protected String exoticStatus;
+	protected double marketPrice;
 	
 	
 	
 	
 	public Animal(){
 		health = 100;
+		marketPrice = 20.00;
 	}
 	
 	public void setType(String type) {
@@ -66,6 +68,10 @@ public abstract class Animal {
 		return result;
 	}
 	
+	public double getMarketPrice(){
+		double result = marketPrice;
+		return result;
+	}
 	
 
 }

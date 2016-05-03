@@ -13,4 +13,6 @@ public class TestExoticCalculator {
 		Bird eagle = birdFactory.getBird("eagle");
 		assertEquals(68, eagle.getExoticRating());
 	}
+	
+	
 }

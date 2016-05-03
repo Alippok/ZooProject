@@ -56,5 +56,12 @@ public class TestAnimalClasses {
 		assertEquals("fish_1", shark.getId());
 	}
 	
+	@Test
+	public void testRayInheritsSetExoticLevelMethodFromAnimalAbstractClass(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish ray = fishFactory.getFish("ray");
+		assertTrue(ray.setExoticRating(78));
+	}
+	
 
 }

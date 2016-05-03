@@ -4,6 +4,7 @@ public abstract class Animal {
 	protected String type;
 	protected String species;
 	protected String id;
+	protected int exoticRating;
 	
 	public void setType(String type) {
 		this.type = type;
@@ -30,6 +31,12 @@ public abstract class Animal {
 	public String getId() {
 		String result = id;
 		return result;
+	}
+	
+	public boolean setExoticRating(int rating){
+		exoticRating = rating;
+		return true;
+	
 	}
 
 }

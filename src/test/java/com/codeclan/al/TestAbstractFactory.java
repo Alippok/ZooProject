@@ -52,6 +52,13 @@ public class TestAbstractFactory {
 		assertTrue(eagle.getExoticStatus() == "rare");
 	}
 	
+	@Test
+	public void testAbstractFactoryCanIncrementIdNumber(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		birdFactory.incrementIdNumber();
+		assertTrue(birdFactory.getCurrentIdNumber() == 2);
+	}
+	
 	
 	
 	

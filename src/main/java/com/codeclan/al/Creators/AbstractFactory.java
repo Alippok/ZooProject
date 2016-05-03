@@ -19,6 +19,10 @@ public abstract class AbstractFactory {
 		return currentNumber;
 	}
 	
+	public void incrementIdNumber(){
+		idNumber += 1;
+	}
+	
 		
 	public void setExoticStatus(Animal animal){
 		int rating = animal.getExoticRating();

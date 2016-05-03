@@ -100,6 +100,13 @@ public class TestAnimalClasses {
 		assertEquals(100, eagle.getHealth());
 	}
 	
+	@Test
+	public void testAnimalsAreInstatiatedWithDefaultExoticStatus(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		assertTrue(eagle.getExoticStatus() == null);
+	}
+	
 	
 	
 

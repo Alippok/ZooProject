@@ -4,8 +4,12 @@ public abstract class Animal {
 	protected String type;
 	protected String species;
 	protected String id;
-	protected int exoticRating;
 	protected int health;
+	protected int exoticRating;
+	protected String exoticStatus;
+	
+	
+	
 	
 	public Animal(){
 		health = 100;
@@ -38,6 +42,11 @@ public abstract class Animal {
 		return result;
 	}
 	
+	public int getHealth() {
+		int result = health;
+		return result;
+	}
+	
 	public boolean setExoticRating(int rating) {
 		if(rating<=100 && rating>0){
 		    exoticRating = rating;
@@ -52,9 +61,11 @@ public abstract class Animal {
 		return result;
 	}
 	
-	public int getHealth() {
-		int result = health;
+	public String getExoticStatus(){
+		String result = exoticStatus;
 		return result;
 	}
+	
+	
 
 }

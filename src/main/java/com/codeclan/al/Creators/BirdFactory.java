@@ -15,7 +15,7 @@ public class BirdFactory extends AbstractFactory implements ExoticCalculator{
 		return null;
 	}
 //	
-	
+		
 	public Bird getBird(String type) {
 		if(type.equals("eagle")){
 			Bird eagle = new Eagle();

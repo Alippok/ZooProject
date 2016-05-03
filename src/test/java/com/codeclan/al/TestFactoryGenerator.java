@@ -102,6 +102,8 @@ public class TestFactoryGenerator {
 		Fish shark = fishFactory.getFish("shark");
 		assertTrue(shark.getExoticRating() == 74);
 	}
+	
+	
 
 	
 	

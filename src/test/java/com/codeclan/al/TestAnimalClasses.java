@@ -4,6 +4,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 import com.codeclan.al.BirdClasses.Bird;
+import com.codeclan.al.FishClasses.Fish;
 
 public class TestAnimalClasses {
 
@@ -13,4 +14,13 @@ public class TestAnimalClasses {
 		Bird eagle = birdFactory.getBird("eagle");
 		assertTrue(eagle.getType() == "eagle");
 	}
+	
+	@Test 
+	public void testRaySetsTypeWhenInstantiated(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish ray = fishFactory.getFish("ray");
+		assertTrue(ray.getType() == "ray");
+	}
+	
+
 }

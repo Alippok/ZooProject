@@ -95,6 +95,13 @@ public class TestFactoryGenerator {
 		Reptile crocodile = reptileFactory.getReptile("crocodilian");
 		assertTrue(crocodile.getExoticRating() == 71);
 	}
+	
+	@Test
+	public void testFishFactorySetsExoticRating(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish shark = fishFactory.getFish("shark");
+		assertTrue(shark.getExoticRating() == 74);
+	}
 
 	
 	

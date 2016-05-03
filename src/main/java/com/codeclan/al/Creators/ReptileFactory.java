@@ -36,5 +36,9 @@ public class ReptileFactory extends AbstractFactory implements ExoticCalculator 
 		}
 	}
 	
+	public void setType(Animal animal) {
+		animal.setType("reptile");
+	}
+	
 
 }

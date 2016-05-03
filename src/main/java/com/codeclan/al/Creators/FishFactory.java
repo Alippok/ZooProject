@@ -42,6 +42,10 @@ public class FishFactory extends AbstractFactory implements ExoticCalculator {
 		}
 	}
 	
+	public void setType(Animal animal) {
+		animal.setType("fish");
+	}
+	
 	
 
 }

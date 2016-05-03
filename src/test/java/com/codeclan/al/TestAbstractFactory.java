@@ -59,6 +59,15 @@ public class TestAbstractFactory {
 		assertTrue(birdFactory.getCurrentIdNumber() == 2);
 	}
 	
+	@Test
+	public void testBirdFactorySetsTypeOfNewBirds(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		assertTrue(eagle.getType() == "bird");
+	}
+	
+	//still need to test other animal factories
+	
 	
 	
 	

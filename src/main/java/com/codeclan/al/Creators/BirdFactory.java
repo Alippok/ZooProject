@@ -19,6 +19,8 @@ public class BirdFactory extends AbstractFactory implements ExoticCalculator{
 	public Bird getBird(String type) {
 		if(type.equals("eagle")){
 			Bird eagle = new Eagle();
+			//could refactor below to be a setup method on abstract factory which takes in an animal?
+			setType(eagle);
 			calculateExoticLevel(eagle);
 			setExoticStatus(eagle);
 			return eagle;
@@ -32,6 +34,10 @@ public class BirdFactory extends AbstractFactory implements ExoticCalculator{
 			animal.setExoticRating(68);
 		}
 		
+	}
+	
+	public void setType(Animal animal) {
+		animal.setType("bird");
 	}
 
 	

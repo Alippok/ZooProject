@@ -23,6 +23,8 @@ public abstract class AbstractFactory {
 		idNumber += 1;
 	}
 	
+	//need to write methods in subclasses to set type to be the class before being able to set the id here
+	
 		
 	public void setExoticStatus(Animal animal){
 		int rating = animal.getExoticRating();
@@ -37,9 +39,11 @@ public abstract class AbstractFactory {
 		} else if(rating<=39 && rating>=1){
 			animal.setExoticStatus("common");
 		}
-		
 	}
 	
+	
+	
+	abstract public void setType(Animal animal);
 	abstract public Fish getFish(String type);
 	abstract public Bird getBird(String type);
 	abstract public Reptile getReptile(String type);

@@ -1,4 +1,8 @@
-package com.codeclan.al;
+package com.codeclan.al.Creators;
+
+import com.codeclan.al.BigCat;
+import com.codeclan.al.Lion;
+import com.codeclan.al.Tiger;
 
 public class BigCatFactory {
 	protected int idNumber;

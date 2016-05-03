@@ -4,6 +4,8 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 import com.codeclan.al.BirdClasses.Bird;
+import com.codeclan.al.Creators.AbstractFactory;
+import com.codeclan.al.Creators.FactoryGenerator;
 
 public class TestExoticCalculator {
 

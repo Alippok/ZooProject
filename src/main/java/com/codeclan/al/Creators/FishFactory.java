@@ -1,4 +1,4 @@
-package com.codeclan.al;
+package com.codeclan.al.Creators;
 
 import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.FishClasses.Fish;

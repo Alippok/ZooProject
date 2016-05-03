@@ -1,6 +1,9 @@
 package com.codeclan.al;
 
 import org.junit.*;
+
+import com.codeclan.al.Creators.BigCatFactory;
+
 import static org.junit.Assert.*;
 
 

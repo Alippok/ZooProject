@@ -5,6 +5,10 @@ import static org.junit.Assert.*;
 
 import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.BirdClasses.Eagle;
+import com.codeclan.al.Creators.AbstractFactory;
+import com.codeclan.al.Creators.BirdFactory;
+import com.codeclan.al.Creators.FactoryGenerator;
+import com.codeclan.al.Creators.FishFactory;
 import com.codeclan.al.FishClasses.Fish;
 import com.codeclan.al.FishClasses.Ray;
 

@@ -1,4 +1,4 @@
-package com.codeclan.al;
+package com.codeclan.al.Creators;
 
 public class FactoryGenerator {
 	

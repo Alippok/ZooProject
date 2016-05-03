@@ -1,13 +1,14 @@
 package com.codeclan.al;
 
 import org.junit.*;
+import static org.junit.Assert.*;
 
 import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.BirdClasses.Eagle;
 import com.codeclan.al.FishClasses.Fish;
 import com.codeclan.al.FishClasses.Ray;
 
-import static org.junit.Assert.*;
+
 
 public class TestFactoryGenerator {
 	

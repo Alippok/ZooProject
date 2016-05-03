@@ -74,8 +74,12 @@ public abstract class Animal {
 	}
 	
 	public boolean setMarketPrice(double price){
-		marketPrice = price;
-		return true;
+		if(price>0){
+		    marketPrice = price;
+		    return true;
+		} else {
+			return false;
+		}
 	}
 	
 

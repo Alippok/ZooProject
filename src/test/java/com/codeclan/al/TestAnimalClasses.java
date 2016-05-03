@@ -121,6 +121,13 @@ public class TestAnimalClasses {
 		assertTrue(eagle.getMarketPrice() == 20.00);		
 	}
 	
+	@Test
+	public void testSetMarketPriceOfAnimalReturnsTrue(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		assertTrue(eagle.setMarketPrice(46.99));
+	}
+	
 	
 	
 

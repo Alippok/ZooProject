@@ -73,5 +73,10 @@ public abstract class Animal {
 		return result;
 	}
 	
+	public boolean setMarketPrice(double price){
+		marketPrice = price;
+		return true;
+	}
+	
 
 }

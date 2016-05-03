@@ -28,6 +28,10 @@ public abstract class AbstractFactory {
 			animal.setExoticStatus("extremely rare");
 		} else if(rating<=74 && rating>=60){
 			animal.setExoticStatus("rare");
+		} else if(rating<=59 && rating>=40){
+			animal.setExoticStatus("uncommon");
+		} else if(rating<=39 && rating>=1){
+			animal.setExoticStatus("common");
 		}
 		
 	}

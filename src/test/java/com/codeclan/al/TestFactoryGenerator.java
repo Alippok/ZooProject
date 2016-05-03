@@ -3,6 +3,7 @@ package com.codeclan.al;
 import org.junit.*;
 
 import com.codeclan.al.BirdClasses.Bird;
+import com.codeclan.al.BirdClasses.Eagle;
 import com.codeclan.al.FishClasses.Fish;
 import com.codeclan.al.FishClasses.Ray;
 
@@ -59,6 +60,13 @@ public class TestFactoryGenerator {
 		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
 		Bird eagle = birdFactory.getBird("eagle");
 		assertTrue(eagle instanceof Bird);
+	}
+	
+	@Test
+	public void testEagleIsAlsoInstanceOfEagle(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		assertTrue(eagle instanceof Eagle);
 	}
 
 	

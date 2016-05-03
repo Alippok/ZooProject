@@ -22,5 +22,13 @@ public class TestAnimalClasses {
 		assertTrue(ray.getType() == "ray");
 	}
 	
+	@Test
+	public void testChildOfBirdAbstractClassCanSetSpecies(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		eagle.setSpecies("Golden Eagle");
+		assertTrue(eagle.getSpecies() == "Golden Eagle");
+	}
+	
 
 }

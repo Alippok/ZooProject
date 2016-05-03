@@ -85,6 +85,14 @@ public class TestAnimalClasses {
 		assertFalse(eagle.setExoticRating(0));
 	}
 	
+	@Test
+	public void testGetExoticRatingMethod(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish ray = fishFactory.getFish("ray");
+		ray.setExoticRating(67);
+		assertEquals(67, ray.getExoticRating());
+	}
+	
 	
 	
 

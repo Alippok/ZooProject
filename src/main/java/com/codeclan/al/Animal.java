@@ -40,7 +40,6 @@ public abstract class Animal {
 		} else {
 			return false;
 		}
-	
 	}
 	
 	public int getExoticRating(){

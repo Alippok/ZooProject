@@ -1,5 +1,8 @@
 package com.codeclan.al;
 
+import com.codeclan.al.BirdClasses.Bird;
+import com.codeclan.al.FishClasses.Fish;
+
 public abstract class AbstractFactory {
 	protected int idNumber;
 	
@@ -13,6 +16,7 @@ public abstract class AbstractFactory {
 	}
 	
 	abstract public Fish getFish(String type);
+	abstract public Bird getBird(String type);
 	
 	
 

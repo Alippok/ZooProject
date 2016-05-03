@@ -1,6 +1,11 @@
 package com.codeclan.al;
 
 import org.junit.*;
+
+import com.codeclan.al.BirdClasses.Bird;
+import com.codeclan.al.FishClasses.Fish;
+import com.codeclan.al.FishClasses.Ray;
+
 import static org.junit.Assert.*;
 
 public class TestFactoryGenerator {
@@ -47,6 +52,13 @@ public class TestFactoryGenerator {
 		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
 		Fish ray = fishFactory.getFish("ray");
 		assertTrue(ray instanceof Ray);
+	}
+	
+	@Test
+	public void testAbstractFactoryPassesGetBirdMethodToChildClass(){
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		Bird eagle = birdFactory.getBird("eagle");
+		assertTrue(eagle instanceof Bird);
 	}
 
 	

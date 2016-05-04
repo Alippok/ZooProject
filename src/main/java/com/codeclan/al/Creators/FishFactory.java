@@ -7,7 +7,7 @@ import com.codeclan.al.FishClasses.Ray;
 import com.codeclan.al.FishClasses.Shark;
 import com.codeclan.al.ReptileClasses.Reptile;
 
-public class FishFactory extends AbstractFactory implements ExoticCalculator {
+public class FishFactory extends AbstractFactory {
 	//redundant inherited methods from AbstractFactory class. Set to null
 	public Bird getBird(String type){
 		return null;
@@ -33,13 +33,14 @@ public class FishFactory extends AbstractFactory implements ExoticCalculator {
 	}
 	
 
-	public void calculateExoticLevel(Animal animal) {
+	public boolean calculateExoticLevel(Animal animal) throws NullPointerException{
 		if(animal instanceof Shark){
 			animal.setExoticRating(74);
 		}
 		if(animal instanceof Ray){
 			animal.setExoticRating(79);
 		}
+		throw new NullPointerException();
 	}
 	
 	public void setType(Animal animal) {

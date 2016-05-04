@@ -7,6 +7,7 @@ import com.codeclan.al.Creators.AbstractFactory;
 import com.codeclan.al.Creators.FactoryGenerator;
 import com.codeclan.al.ReptileClasses.Crocodilian;
 import com.codeclan.al.ReptileClasses.Reptile;
+import com.codeclan.al.ReptileClasses.Turtle;
 
 import static org.junit.Assert.*;
 
@@ -136,6 +137,27 @@ public class TestAbstractFactory {
 		Reptile crocodile = reptileFactory.getReptile("crocodilian");
 		assertTrue(crocodile.getMarketPrice() == 1000.00);
 	}
+	
+	@Test(expected = NullPointerException.class)
+	public void testFactorySetExoticLevelThrowsNullPointerExceptionIfAnimalNotFound(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		Reptile turtle = new Turtle();
+		try{
+			reptileFactory.calculateExoticLevel(turtle);
+			fail("Exception was not thrown");
+		}catch (NullPointerException e){
+			System.err.println(e.getMessage());
+			throw new NullPointerException();
+		}
+				
+	}
+	
+//	@Test
+//	public void testFactorySetupAnimalMethodCanStillSetupAnimalIfExoticRatingIsNotSet(){
+//		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+//		Reptile turtle = reptileFactory.getReptile("turtle");
+//		assertTrue(turtle.getId().equals("reptile_1"));
+//	}
 	
 	
 	

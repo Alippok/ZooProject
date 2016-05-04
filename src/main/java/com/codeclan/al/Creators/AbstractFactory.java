@@ -61,7 +61,7 @@ public abstract class AbstractFactory {
 	}
 	
 	
-	abstract public void calculateExoticLevel(Animal animal);
+	abstract public boolean calculateExoticLevel(Animal animal);
 	abstract public void setType(Animal animal);
 	abstract public Fish getFish(String type);
 	abstract public Bird getBird(String type);

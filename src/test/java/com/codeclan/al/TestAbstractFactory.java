@@ -112,8 +112,15 @@ public class TestAbstractFactory {
 	public void testAbstractFactorySetupAnimalMethod(){
 		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
 		Reptile crocodile = reptileFactory.getReptile("crocodilian");
-		assertTrue(crocodile.getId().equals("reptile_1"));
+		assertTrue(crocodile.getExoticStatus().equals("rare"));
 		
+	}
+	
+	@Test
+	public void testAbstractFactorySetupAnimalMethodOnDifferentReptile(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		Reptile lizard = reptileFactory.getReptile("squamate");
+		assertEquals("uncommon", lizard.getExoticStatus());
 	}
 	
 	

@@ -28,8 +28,7 @@ public class ReptileFactory extends AbstractFactory {
 		}
 		if(type.equals("squamate")){
 			Reptile squamate = new Squamate();
-			setType(squamate);
-			assignIdToAnimal(squamate);
+			setupAnimal(squamate);
 			return squamate;
 		}
 		return null;

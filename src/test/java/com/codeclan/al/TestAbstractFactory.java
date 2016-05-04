@@ -5,6 +5,7 @@ import org.junit.*;
 import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.Creators.AbstractFactory;
 import com.codeclan.al.Creators.FactoryGenerator;
+import com.codeclan.al.FishClasses.Fish;
 import com.codeclan.al.ReptileClasses.Crocodilian;
 import com.codeclan.al.ReptileClasses.Reptile;
 import com.codeclan.al.ReptileClasses.Turtle;
@@ -136,6 +137,12 @@ public class TestAbstractFactory {
 		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
 		Reptile crocodile = reptileFactory.getReptile("crocodilian");
 		assertTrue(crocodile.getMarketPrice() == 1000.00);
+	}
+	
+	@Test public void testFishFactorySetupMethods(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish shark = fishFactory.getFish("shark");
+		assertEquals("fish_1", shark.getId());
 	}
 	
 //	@Test(expected = NullPointerException.class)

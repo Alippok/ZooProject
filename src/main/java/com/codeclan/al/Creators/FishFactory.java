@@ -21,26 +21,29 @@ public class FishFactory extends AbstractFactory {
 	public Fish getFish(String type){
 		if(type.equals("shark")){
 			Fish shark = new Shark();
-			calculateExoticLevel(shark);
+			setupAnimal(shark);
 			return shark;
 		}
 		if(type.equals("ray")){
 			Fish ray = new Ray();
-			calculateExoticLevel(ray);
+			setupAnimal(ray);
 			return ray;
 		}
 		return null;
 	}
 	
 
-	public boolean calculateExoticLevel(Animal animal) throws NullPointerException{
+	public boolean calculateExoticLevel(Animal animal) {
 		if(animal instanceof Shark){
 			animal.setExoticRating(74);
+			return true;
 		}
 		if(animal instanceof Ray){
 			animal.setExoticRating(79);
+			return true;
 		}
-		throw new NullPointerException();
+		return false;
+		
 	}
 	
 	public void setType(Animal animal) {

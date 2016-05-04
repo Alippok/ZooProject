@@ -1,6 +1,7 @@
 package com.codeclan.al.Creators;
 
 import com.codeclan.al.Animal;
+import com.codeclan.al.ValueCalculator;
 import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.FishClasses.Fish;
 import com.codeclan.al.ReptileClasses.Reptile;
@@ -8,9 +9,11 @@ import com.codeclan.al.ReptileClasses.Reptile;
 public abstract class AbstractFactory {
 	
 	protected int idNumber;
+	protected ValueCalculator valueCalculator;
 	
 	public AbstractFactory(){
 		idNumber = 1;
+		valueCalculator = new ValueCalculator();
 	}
 	
 	public int getCurrentIdNumber(){
@@ -25,6 +28,10 @@ public abstract class AbstractFactory {
 	public void assignIdToAnimal(Animal animal){
 		animal.setId(idNumber);
 		incrementIdNumber();
+	}
+	
+	public Class<? extends ValueCalculator> getValueCalculator(){
+		return valueCalculator.getClass();
 	}
 	
 	

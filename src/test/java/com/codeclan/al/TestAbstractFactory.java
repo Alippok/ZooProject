@@ -123,7 +123,12 @@ public class TestAbstractFactory {
 		assertEquals("uncommon", lizard.getExoticStatus());
 	}
 	
-	
+	@Test
+	public void testFactoryisInstantiatedWithValueCalculator(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		ValueCalculator testCalculator = new ValueCalculator();
+		assertEquals(testCalculator.getClass(), reptileFactory.getValueCalculator());
+	}
 	
 	
 	

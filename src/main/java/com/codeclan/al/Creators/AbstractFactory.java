@@ -11,7 +11,6 @@ public abstract class AbstractFactory {
 	
 	public AbstractFactory(){
 		idNumber = 1;
-		
 	}
 	
 	public int getCurrentIdNumber(){
@@ -21,6 +20,10 @@ public abstract class AbstractFactory {
 	
 	public void incrementIdNumber(){
 		idNumber += 1;
+	}
+	
+	public void assignIdToAnimal(Animal animal){
+		animal.setId(idNumber);
 	}
 	
 	//need to write methods in subclasses to set type to be the class before being able to set the id here

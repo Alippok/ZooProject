@@ -5,6 +5,7 @@ import org.junit.*;
 import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.Creators.AbstractFactory;
 import com.codeclan.al.Creators.FactoryGenerator;
+import com.codeclan.al.ReptileClasses.Crocodilian;
 import com.codeclan.al.ReptileClasses.Reptile;
 
 import static org.junit.Assert.*;
@@ -68,7 +69,12 @@ public class TestAbstractFactory {
 	
 	//still need to test other animal factories
 	
-	
+	@Test
+	public void testAbstractFactoryAssignsIdForGivenAnimal(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		Reptile crocodile = reptileFactory.getReptile("crocodilian");
+		assertEquals(crocodile.getId(), "reptile_1");
+	}
 	
 	
 	

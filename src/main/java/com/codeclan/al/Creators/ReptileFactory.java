@@ -22,6 +22,8 @@ public class ReptileFactory extends AbstractFactory implements ExoticCalculator 
 	public Reptile getReptile(String type) {
 		if(type.equals("crocodilian")){
 			Reptile crocodilian = new Crocodilian();
+			setType(crocodilian);
+			assignIdToAnimal(crocodilian);
 			calculateExoticLevel(crocodilian);
 			setExoticStatus(crocodilian);
 			return crocodilian;

@@ -25,5 +25,13 @@ public class TestValueCalculator {
 		expert.valueAnimal(crocodile);
 		assertTrue(crocodile.getMarketPrice() == 1500.00);
 	}
+	
+	@Test
+	public void testValueCalculatorReturnsTrueIfStatusWasFound(){
+		ValueCalculator expert = new ValueCalculator();
+		Reptile crocodile = new Crocodilian();
+		crocodile.setExoticStatus("extremely rare");
+		assertTrue(expert.valueAnimal(crocodile));
+	}
 		
 }

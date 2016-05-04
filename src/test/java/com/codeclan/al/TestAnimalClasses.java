@@ -4,6 +4,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 import com.codeclan.al.BirdClasses.Bird;
+import com.codeclan.al.BirdClasses.Eagle;
 import com.codeclan.al.Creators.AbstractFactory;
 import com.codeclan.al.Creators.FactoryGenerator;
 import com.codeclan.al.FishClasses.Fish;
@@ -135,6 +136,12 @@ public class TestAnimalClasses {
 		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
 		Bird eagle = birdFactory.getBird("eagle");
 		assertFalse(eagle.setMarketPrice(0));
+	}
+	
+	@Test
+	public void testAnimalExoticStatusIsNullIfUnset(){
+		Bird eagle = new Eagle();
+		assertEquals(null, eagle.getExoticStatus());
 	}
 	
 	

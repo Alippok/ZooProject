@@ -2,7 +2,7 @@ package com.codeclan.al;
 
 public class ValueCalculator {
 	
-	public boolean valueAnimal(Animal animal){
+	public boolean valueAnimal(Animal animal) throws NullPointerException{
 		String exoticStatus = animal.getExoticStatus();
 		if(exoticStatus.equals("endangered")){
 			animal.setMarketPrice(2500.00);
@@ -12,7 +12,11 @@ public class ValueCalculator {
 			animal.setMarketPrice(1500.00);
 			return true;
 		}
-		return false;
+		
+		throw new NullPointerException();
+		
+		
+		
 	}
 
 }

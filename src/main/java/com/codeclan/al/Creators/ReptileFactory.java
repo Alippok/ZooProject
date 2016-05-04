@@ -5,6 +5,7 @@ import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.FishClasses.Fish;
 import com.codeclan.al.ReptileClasses.Crocodilian;
 import com.codeclan.al.ReptileClasses.Reptile;
+import com.codeclan.al.ReptileClasses.Squamate;
 
 public class ReptileFactory extends AbstractFactory implements ExoticCalculator {
 //redundant methods inherited from AbstractFactory
@@ -28,6 +29,12 @@ public class ReptileFactory extends AbstractFactory implements ExoticCalculator 
 			setExoticStatus(crocodilian);
 			return crocodilian;
 		}
+		if(type.equals("squamate")){
+			Reptile squamate = new Squamate();
+			setType(squamate);
+			assignIdToAnimal(squamate);
+			return squamate;
+		}
 		return null;
 		
 	}
@@ -36,6 +43,7 @@ public class ReptileFactory extends AbstractFactory implements ExoticCalculator 
 		if(animal instanceof Crocodilian){
 			animal.setExoticRating(71);
 		}
+		
 	}
 	
 	public void setType(Animal animal) {

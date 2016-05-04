@@ -91,6 +91,14 @@ public class TestAbstractFactory {
 		assertEquals("reptile_2", crocodileTwo.getId());
 	}
 	
+	@Test
+	public void testAnimalOfDifferentSpeciesFromSameFactoryIsAssignedCorrectId(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		Reptile crocodile = reptileFactory.getReptile("crocodilian");
+		Reptile lizard = reptileFactory.getReptile("squamate");
+		assertEquals("reptile_2", lizard.getId());
+	}
+	
 	
 	
 	

@@ -24,6 +24,7 @@ public abstract class AbstractFactory {
 	
 	public void assignIdToAnimal(Animal animal){
 		animal.setId(idNumber);
+		incrementIdNumber();
 	}
 	
 	//need to write methods in subclasses to set type to be the class before being able to set the id here

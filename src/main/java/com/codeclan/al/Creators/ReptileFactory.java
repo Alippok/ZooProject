@@ -43,6 +43,9 @@ public class ReptileFactory extends AbstractFactory implements ExoticCalculator 
 		if(animal instanceof Crocodilian){
 			animal.setExoticRating(71);
 		}
+		if(animal instanceof Squamate){
+			animal.setExoticRating(56);
+		}
 		
 	}
 	

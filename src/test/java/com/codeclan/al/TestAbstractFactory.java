@@ -83,6 +83,14 @@ public class TestAbstractFactory {
 		assertTrue(reptileFactory.getCurrentIdNumber() == 2);
 	}
 	
+	@Test
+	public void testNextInstanceOfInstatiatedAnimalGetsDifferentIdNumber(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		Reptile crocodile = reptileFactory.getReptile("crocodilian");
+		Reptile crocodileTwo = reptileFactory.getReptile("crocodilian");
+		assertEquals("reptile_2", crocodileTwo.getId());
+	}
+	
 	
 	
 	

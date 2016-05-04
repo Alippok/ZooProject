@@ -29,12 +29,12 @@ public class BirdFactory extends AbstractFactory {
 		return null;
 	}
 
-	public boolean calculateExoticLevel(Animal animal) throws NullPointerException{
+	public boolean calculateExoticLevel(Animal animal) {
 		if(animal instanceof Eagle){
 			animal.setExoticRating(68);
 			return true;
 		}
-		throw new NullPointerException();
+		return false;
 	}
 	
 	public void setType(Animal animal) {

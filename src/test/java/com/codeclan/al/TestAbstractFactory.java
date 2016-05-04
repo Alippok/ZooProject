@@ -138,20 +138,20 @@ public class TestAbstractFactory {
 		assertTrue(crocodile.getMarketPrice() == 1000.00);
 	}
 	
-	@Test(expected = NullPointerException.class)
-	public void testFactorySetExoticLevelThrowsNullPointerExceptionIfAnimalNotFound(){
-		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
-		Reptile turtle = new Turtle();
-		try{
-			reptileFactory.calculateExoticLevel(turtle);
-			fail("Exception was not thrown");
-		}catch (NullPointerException e){
-			System.err.println(e.getMessage());
-			throw new NullPointerException();
-		}
-				
-	}
-	
+//	@Test(expected = NullPointerException.class)
+//	public void testFactorySetExoticLevelThrowsNullPointerExceptionIfAnimalNotFound(){
+//		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+//		Reptile turtle = new Turtle();
+//		try{
+//			reptileFactory.calculateExoticLevel(turtle);
+//			fail("Exception was not thrown");
+//		}catch (NullPointerException e){
+//			System.err.println(e.getMessage());
+//			throw new NullPointerException();
+//		}
+//				
+//	}
+//	
 //	@Test
 //	public void testFactorySetupAnimalMethodCanStillSetupAnimalIfExoticRatingIsNotSet(){
 //		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");

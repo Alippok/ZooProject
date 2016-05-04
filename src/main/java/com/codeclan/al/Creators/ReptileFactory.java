@@ -42,16 +42,16 @@ public class ReptileFactory extends AbstractFactory {
 	}
 
 	
-	public boolean calculateExoticLevel(Animal animal) throws NullPointerException {
+	public boolean calculateExoticLevel(Animal animal) {
 		if(animal instanceof Crocodilian){
 			animal.setExoticRating(71);
 			return true;
-		}
+		  }
 		if(animal instanceof Squamate){
 			animal.setExoticRating(56);
 			return true;
-		}
-		throw new NullPointerException();
+		  }
+		return false;
 		
 	}
 	

@@ -8,6 +8,7 @@ import com.codeclan.al.BirdClasses.Eagle;
 import com.codeclan.al.Creators.AbstractFactory;
 import com.codeclan.al.Creators.FactoryGenerator;
 import com.codeclan.al.FishClasses.Fish;
+import com.codeclan.al.FishClasses.Shark;
 
 public class TestAnimalClasses {
 
@@ -112,10 +113,11 @@ public class TestAnimalClasses {
 	
 	@Test
 	public void testAnimalsAreInstantiatedWithDefaultMarketPrice(){
-		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
-		Fish shark = fishFactory.getFish("shark");
+//		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish shark = new Shark();
 		assertTrue(shark.getMarketPrice() == 20.00);
 	}
+
 	
 	@Test
 	public void testOtherAnimalSubClassIsInstantiatedWithDefaultPrice(){

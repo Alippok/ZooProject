@@ -130,6 +130,13 @@ public class TestAbstractFactory {
 		assertEquals(testCalculator.getClass(), reptileFactory.getValueCalculator());
 	}
 	
+	@Test
+	public void testFactorySetupAnimalMethodCanSetMarketPriceOfAnimal(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		Reptile crocodile = reptileFactory.getReptile("crocodilian");
+		assertTrue(crocodile.getMarketPrice() == 1000.00);
+	}
+	
 	
 	
 	

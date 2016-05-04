@@ -42,6 +42,7 @@ public abstract class AbstractFactory {
 		assignIdToAnimal(animal);
 		calculateExoticLevel(animal);
 		setExoticStatus(animal);
+		valueCalculator.valueAnimal(animal);
 	}
 		
 	public void setExoticStatus(Animal animal){

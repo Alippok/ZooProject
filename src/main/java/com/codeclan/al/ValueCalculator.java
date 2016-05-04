@@ -26,9 +26,6 @@ public class ValueCalculator {
 		}
 		
 		throw new NullPointerException();
-		
-		
-		
 	}
 
 }

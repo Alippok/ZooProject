@@ -99,6 +99,15 @@ public class TestAbstractFactory {
 		assertEquals("reptile_2", lizard.getId());
 	}
 	
+	@Test
+	public void testAssignIdMethodOfOneFactoryDoesNotAffectIdNumberOfAnotherFactory(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		AbstractFactory birdFactory = FactoryGenerator.getFactory("bird");
+		
+		Reptile crocodile = reptileFactory.getReptile("crocodilian");
+		assertTrue(birdFactory.getCurrentIdNumber() == 1);
+	}
+	
 	
 	
 	

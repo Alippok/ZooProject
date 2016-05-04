@@ -139,10 +139,20 @@ public class TestAbstractFactory {
 		assertTrue(crocodile.getMarketPrice() == 1000.00);
 	}
 	
-	@Test public void testFishFactorySetupMethods(){
+	@Test 
+	public void testFishFactorySetupMethod(){
 		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
 		Fish shark = fishFactory.getFish("shark");
 		assertEquals("fish_1", shark.getId());
+	}
+	
+	@Test 
+	public void testFishFactoryCanInstantiateMultipleAnimals(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish shark = fishFactory.getFish("shark");
+		Fish ray = fishFactory.getFish("ray");
+		Fish sharkTwo = fishFactory.getFish("shark");
+		assertTrue(sharkTwo.getId().equals("fish_3"));
 	}
 	
 //	@Test(expected = NullPointerException.class)

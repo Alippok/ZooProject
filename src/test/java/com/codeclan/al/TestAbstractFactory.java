@@ -108,6 +108,14 @@ public class TestAbstractFactory {
 		assertTrue(birdFactory.getCurrentIdNumber() == 1);
 	}
 	
+	@Test
+	public void testAbstractFactorySetupAnimalMethod(){
+		AbstractFactory reptileFactory = FactoryGenerator.getFactory("reptile");
+		Reptile crocodile = reptileFactory.getReptile("crocodilian");
+		assertTrue(crocodile.getId().equals("reptile_1"));
+		
+	}
+	
 	
 	
 	

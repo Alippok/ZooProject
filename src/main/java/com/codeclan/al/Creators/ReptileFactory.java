@@ -7,7 +7,7 @@ import com.codeclan.al.ReptileClasses.Crocodilian;
 import com.codeclan.al.ReptileClasses.Reptile;
 import com.codeclan.al.ReptileClasses.Squamate;
 
-public class ReptileFactory extends AbstractFactory implements ExoticCalculator {
+public class ReptileFactory extends AbstractFactory {
 //redundant methods inherited from AbstractFactory
 	@Override
 	public Fish getFish(String type) {
@@ -23,10 +23,7 @@ public class ReptileFactory extends AbstractFactory implements ExoticCalculator 
 	public Reptile getReptile(String type) {
 		if(type.equals("crocodilian")){
 			Reptile crocodilian = new Crocodilian();
-			setType(crocodilian);
-			assignIdToAnimal(crocodilian);
-			calculateExoticLevel(crocodilian);
-			setExoticStatus(crocodilian);
+			setupAnimal(crocodilian);
 			return crocodilian;
 		}
 		if(type.equals("squamate")){
@@ -39,6 +36,7 @@ public class ReptileFactory extends AbstractFactory implements ExoticCalculator 
 		
 	}
 
+	
 	public void calculateExoticLevel(Animal animal) {
 		if(animal instanceof Crocodilian){
 			animal.setExoticRating(71);

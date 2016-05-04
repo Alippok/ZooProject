@@ -27,8 +27,15 @@ public abstract class AbstractFactory {
 		incrementIdNumber();
 	}
 	
+	
 	//need to write methods in subclasses to set type to be the class before being able to set the id here
 	
+	public void setupAnimal(Animal animal){
+		setType(animal);
+		assignIdToAnimal(animal);
+		calculateExoticLevel(animal);
+		setExoticStatus(animal);
+	}
 		
 	public void setExoticStatus(Animal animal){
 		int rating = animal.getExoticRating();
@@ -46,7 +53,7 @@ public abstract class AbstractFactory {
 	}
 	
 	
-	
+	abstract public void calculateExoticLevel(Animal animal);
 	abstract public void setType(Animal animal);
 	abstract public Fish getFish(String type);
 	abstract public Bird getBird(String type);

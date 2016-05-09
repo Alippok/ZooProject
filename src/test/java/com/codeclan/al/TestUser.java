@@ -20,5 +20,14 @@ public class TestUser {
 				zooManager.buildAnimalDetails(shark.getId(), shark.getType(), shark.getSpecies(), shark.getExoticStatus(), shark.getMarketPrice()));
 	}
 	
+	@Test
+	public void testUserCanGetDetailsOfAnAnimal(){
+		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+		Fish shark = fishFactory.getFish("shark");
+		User zooManager = new User();
+		assertEquals("Details{Id: fish_1, Type: fish, Species: shark, Exotic Status: rare, Market Price: 1000.0", 
+				zooManager.getAnimalDetails(shark));
+	}
+	
 
 }

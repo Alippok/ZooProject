@@ -44,6 +44,7 @@ public abstract class Animal {
 		return result;
 	}
 	
+	
 	public int getHealth() {
 		int result = health;
 		return result;

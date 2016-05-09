@@ -22,6 +22,7 @@ public class FishFactory extends AbstractFactory {
 		if(type.equals("shark")){
 			Fish shark = new Shark();
 			setupAnimal(shark);
+			shark.setSpecies("shark");
 			return shark;
 		}
 		if(type.equals("ray")){

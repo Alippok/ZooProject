@@ -1,7 +1,10 @@
 package com.codeclan.al;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
 
 import com.codeclan.al.BirdClasses.Bird;
 import com.codeclan.al.BirdClasses.Eagle;
@@ -145,6 +148,15 @@ public class TestAnimalClasses {
 		Bird eagle = new Eagle();
 		assertEquals(null, eagle.getExoticStatus());
 	}
+	
+//	@Test
+//	public void testAnimalCanDisplayDetails(){
+//		AbstractFactory fishFactory = FactoryGenerator.getFactory("fish");
+//		Fish shark = fishFactory.getFish("shark");
+//		//this would make more sense to be a getDetails() method on a ZooManager class which built the string up 
+//		//using an animal passed into the method
+//		assertEquals("Details{id: fish_1, type: fish, species: shark, Exotic Status: Rare, Market Price: 1000.00", shark.getDetails());
+//	}
 	
 	
 	
